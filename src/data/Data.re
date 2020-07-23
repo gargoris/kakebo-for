@@ -1,5 +1,5 @@
 module DateEntering = {
-  type apunte = {
+  type aAccountable = {
     date: Js.Date.t,
     comment: string,
     ammount: float,
@@ -7,12 +7,12 @@ module DateEntering = {
 };
 module Gasto = {
   type t =
-    | Supervivencia(string, DateEntering.apunte)
-    | OcioVicio(string, DateEntering.apunte)
-    | Cultura(string, DateEntering.apunte)
-    | Extras(string, DateEntering.apunte)
-    | Fijo(string, DateEntering.apunte);
+    | Supervivencia(string, DateEntering.aAccountable)
+    | OcioVicio(string, DateEntering.aAccountable)
+    | Cultura(string, DateEntering.aAccountable)
+    | Extras(string, DateEntering.aAccountable)
+    | Fijo(string, DateEntering.aAccountable);
 };
 module Ingreso = {
-  type t = DateEntering.apunte;
+  type t = DateEntering.aAccountable;
 };
