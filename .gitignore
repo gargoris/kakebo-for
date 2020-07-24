@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 # elm-package generated files
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+=======
+.DS_Store
+.merlin
+.bsb.lock
+npm-debug.log
+/lib/bs/
+/node_modules/
+/bundleOutput/
+>>>>>>> 07344c4... first upload
