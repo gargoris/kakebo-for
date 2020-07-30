@@ -2,10 +2,21 @@
  * Module for some accountable
  */
 module AccMovement = {
+  /**
+   * A handler is the person or entity that makes the movement: your employer, you...
+   */
+  type handler =
+    | Person(string)
+    | Entity(string);
+
+  /**
+   * Main type
+   */
   type t = {
     date: Js.Date.t,
     comment: string,
     ammount: float,
+    who: handler,
   };
 };
 
@@ -21,7 +32,7 @@ module Expense = {
     | Fixed(string, AccMovement.t);
 };
 
-module Incoming = {
+module Income = {
   type t = {
     _type: string,
     movement: AccMovement.t,
